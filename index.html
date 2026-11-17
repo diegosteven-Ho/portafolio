@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Diego — Desarrollo web y ecommerce</title>
+<meta name="description" content="Diseño y desarrollo de tiendas en línea, sitios web y sistemas a la medida en El Salvador.">
+<meta property="og:title" content="Diego — Desarrollo web y ecommerce">
+<meta property="og:description" content="Construyo tiendas en línea y sistemas que hacen crecer tu negocio.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='4' fill='%235EEAD4'/%3E%3C/svg%3E">
+<style>
+:root{--a:#5EEAD4;--bg:#0B0D10;--fg:#EDEFF2;--mut:#A3ACB9;--line:#1C2026;--card:#12151A;--cb:#1F242C}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:Inter,system-ui,sans-serif}
+a{color:var(--fg);text-decoration:none}a:hover{color:#fff}
+h1,h2,h3,.logo,.n{font-family:'Space Grotesk',sans-serif}
+.wrap{max-width:1200px;margin:0 auto;padding:96px 24px;display:flex;flex-direction:column;gap:48px}
+section+section{border-top:1px solid var(--line)}
+header{position:sticky;top:0;z-index:10;background:rgba(11,13,16,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav{max-width:1200px;margin:0 auto;padding:18px 24px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px}
+.logo{font-weight:700;font-size:22px;letter-spacing:-.02em;display:flex;align-items:center;gap:10px}
+.logo span{width:12px;height:12px;border-radius:3px;background:var(--a)}
+.links{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.links a{padding:12px 14px;font-size:15px;color:#B4BCC8}
+.btn{padding:16px 26px;font-size:16px;font-weight:600;border-radius:12px;display:inline-flex;align-items:center;gap:10px}
+.pri,.links a.pri{color:var(--bg);background:var(--a)}.pri:hover{color:var(--bg);filter:brightness(1.08)}
+.links a.pri{padding:12px 18px;font-weight:600;border-radius:10px}
+.sec{color:var(--fg);border:1px solid #2A303A}
+.eyebrow{margin:0;font-size:14px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#8A93A0}
+.hero{padding:120px 24px 96px;gap:28px}
+.hero .eyebrow{color:var(--a)}
+h1{margin:0;font-weight:700;font-size:clamp(44px,7vw,88px);line-height:1.02;letter-spacing:-.035em;max-width:1000px}
+.lead{margin:0;font-size:clamp(18px,2vw,21px);line-height:1.6;color:#B4BCC8;max-width:680px}
+.ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:8px}
+.head{display:flex;flex-direction:column;gap:14px;max-width:640px}
+h2{margin:0;font-weight:600;font-size:clamp(32px,4vw,48px);line-height:1.1;letter-spacing:-.025em}
+.head p:not(.eyebrow){margin:0;font-size:17px;line-height:1.6;color:var(--mut)}
+.grid4{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.card{background:var(--card);border:1px solid var(--cb);border-radius:18px;padding:28px;display:flex;flex-direction:column;gap:14px}
+.ico{width:44px;height:44px;border-radius:12px;background:#1A1F26;display:flex;align-items:center;justify-content:center;color:var(--a)}
+h3{margin:0;font-weight:600;font-size:21px}
+.card p,li p{margin:0;font-size:15px;line-height:1.6;color:var(--mut)}
+.projs{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,480px),1fr));gap:24px}
+.proj{background:var(--card);border:1px solid var(--cb);border-radius:22px;overflow:hidden;display:flex;flex-direction:column}
+.mock{padding:28px 28px 0;height:260px;display:flex;align-items:flex-end}
+.win{width:100%;height:100%;background:#fff;border-radius:12px 12px 0 0;box-shadow:0 -10px 40px rgba(0,0,0,.18);display:flex;flex-direction:column;overflow:hidden}
+.bar{height:30px;background:#F1F2F4;display:flex;align-items:center;gap:6px;padding:0 12px}
+.bar span{width:9px;height:9px;border-radius:50%;background:#D5D8DD}
+.bar i{margin-left:10px;height:14px;flex:1;max-width:180px;border-radius:7px;background:#E3E5E9}
+.wb{flex:1;padding:18px;display:flex;flex-direction:column;gap:12px}
+.wh{display:flex;justify-content:space-between;align-items:center}
+.wh b{font-family:'Space Grotesk',sans-serif;font-size:18px}
+.wh em{width:64px;height:22px;border-radius:6px}
+.tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;flex:1}
+.tiles div{border-radius:8px}
+.pbody{padding:28px;display:flex;flex-direction:column;gap:14px}
+.pbody h3{font-size:26px;letter-spacing:-.015em}
+.pbody p{margin:0;font-size:16px;line-height:1.6;color:var(--mut)}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag{font-size:13px;font-weight:500;color:#C9D0DA;background:#1A1F26;border:1px solid #262C35;border-radius:999px;padding:5px 12px}
+.plink{align-self:flex-start;margin-top:4px;padding:10px 0;font-size:15px;font-weight:600;color:var(--a)}
+ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+li{border-top:2px solid #262C35;padding-top:22px;display:flex;flex-direction:column;gap:10px}
+.n{font-weight:600;font-size:15px;color:var(--a)}
+.cta{background:var(--card);border:1px solid var(--cb);border-radius:28px;padding:clamp(32px,6vw,72px);display:flex;flex-direction:column;gap:24px;align-items:flex-start}
+.cta h2{font-weight:700;font-size:clamp(34px,5vw,60px);line-height:1.05;letter-spacing:-.03em;max-width:820px}
+.cta p{margin:0;font-size:18px;line-height:1.6;color:#B4BCC8;max-width:620px}
+footer{max-width:1200px;margin:0 auto;padding:24px 24px 48px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:14px;color:#8A93A0}
+</style>
+</head>
+<body>
+<header><nav aria-label="Principal">
+<a class="logo" href="#inicio"><span></span>Diego</a>
+<div class="links"><a href="#servicios">Servicios</a><a href="#proyectos">Proyectos</a><a href="#proceso">Cómo trabajo</a><a class="pri" href="#contacto">Hablemos</a></div>
+</nav></header>
+<main>
+<section id="inicio"><div class="wrap hero">
+<p class="eyebrow">Desarrollo web · Ecommerce · El Salvador</p>
+<h1>Construyo tiendas en línea y sistemas que hacen crecer tu negocio.</h1>
+<p class="lead">Soy Diego. Diseño y desarrollo sitios, ecommerce y herramientas internas a la medida — desde la marca hasta la base de datos — para negocios que quieren vender más y ordenarse mejor.</p>
+<div class="ctas"><a class="btn pri" href="#contacto">Cotiza tu proyecto</a><a class="btn sec" href="#proyectos">Ver proyectos</a></div>
+</div></section>
+<section id="servicios"><div class="wrap">
+<div class="head"><p class="eyebrow">Servicios</p><h2>Lo que puedo construir para ti</h2></div>
+<div class="grid4">
+<article class="card"><div class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6h15l-1.5 9h-12zM6 6 5 3H2M9 20a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM18 20a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/></svg></div><h3>Tiendas en línea</h3><p>Ecommerce con catálogo, carrito y pedidos, listo para vender desde el celular.</p></article>
+<article class="card"><div class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5h18v14H3zM3 9h18"/></svg></div><h3>Sitios web y landing pages</h3><p>Páginas rápidas y bien diseñadas que presentan tu negocio y convierten visitas en clientes.</p></article>
+<article class="card"><div class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div><h3>Sistemas a la medida</h3><p>Paneles de inventario, ventas, pedidos y finanzas para que tu negocio funcione ordenado.</p></article>
+<article class="card"><div class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c4.4 0 8 1.3 8 3s-3.6 3-8 3-8-1.3-8-3 3.6-3 8-3zM4 6v12c0 1.7 3.6 3 8 3s8-1.3 8-3V6M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg></div><h3>Apps con base de datos</h3><p>Aplicaciones con usuarios, roles y datos en la nube, construidas sobre Supabase.</p></article>
+</div></div></section>
+<section id="proyectos"><div class="wrap">
+<div class="head"><p class="eyebrow">Proyectos</p><h2>Trabajo reciente</h2><p>Ecommerce, apps y sistemas internos que diseñé y desarrollé.</p></div>
+<div class="projs">
+<article class="proj"><div class="mock" style="background:#E2A04A" aria-hidden="true"><div class="win"><div class="bar"><span></span><span></span><span></span><i></i></div><div class="wb"><div class="wh"><b style="color:#5A3A10">Ambar</b><em style="background:#E2A04A"></em></div><div class="tiles"><div style="background:#F6E6CF"></div><div style="background:#F6E6CF"></div><div style="background:#F6E6CF"></div></div></div></div></div><div class="pbody"><div class="tags"><span class="tag">Ecommerce</span><span class="tag">Marca</span></div><h3>Ambar</h3><p>Tienda en línea para traer productos por encargo desde EE. UU. a El Salvador: catálogo, pedidos e identidad visual.</p><a class="plink" href="https://ambarsv.com" target="_blank" rel="noopener">ambarsv.com →</a></div></article>
+<article class="proj"><div class="mock" style="background:#4642A0" aria-hidden="true"><div class="win"><div class="bar"><span></span><span></span><span></span><i></i></div><div class="wb"><div class="wh"><b style="color:#1C1A3D">Hogareño</b><em style="background:#4642A0"></em></div><div class="tiles"><div style="background:#E4E7F5"></div><div style="background:#E4E7F5"></div><div style="background:#E4E7F5"></div></div></div></div></div><div class="pbody"><div class="tags"><span class="tag">App</span><span class="tag">Supabase</span><span class="tag">Marca</span></div><h3>Hogareño</h3><p>App que conecta hogares salvadoreños con técnicos de confianza. Backend en Supabase y manual de marca completo.</p></div></article>
+<article class="proj"><div class="mock" style="background:#D9A7A7" aria-hidden="true"><div class="win"><div class="bar"><span></span><span></span><span></span><i></i></div><div class="wb"><div class="wh"><b style="color:#5B3434">Meli</b><em style="background:#D9A7A7"></em></div><div class="tiles"><div style="background:#F7EAEA"></div><div style="background:#F7EAEA"></div><div style="background:#F7EAEA"></div></div></div></div></div><div class="pbody"><div class="tags"><span class="tag">Sistema interno</span><span class="tag">Inventario</span></div><h3>Meli</h3><p>Sistema de inventario y ventas con roles: la dueña administra ventas, pedidos, envíos y finanzas; los vendedores reportan cada venta.</p></div></article>
+<article class="proj"><div class="mock" style="background:#1F4D3A" aria-hidden="true"><div class="win"><div class="bar"><span></span><span></span><span></span><i></i></div><div class="wb"><div class="wh"><b style="color:#123326">Finanzas Work</b><em style="background:#1F4D3A"></em></div><div class="tiles"><div style="background:#E3EEE8"></div><div style="background:#E3EEE8"></div><div style="background:#E3EEE8"></div></div></div></div></div><div class="pbody"><div class="tags"><span class="tag">Web app</span><span class="tag">Finanzas</span></div><h3>Finanzas Work</h3><p>Herramienta para ordenar tus finanzas separándolas por proyectos: emprendimiento, personales y más.</p></div></article>
+</div></div></section>
+<section id="proceso"><div class="wrap">
+<div class="head"><p class="eyebrow">Cómo trabajo</p><h2>De la idea a tu tienda en línea</h2></div>
+<ol>
+<li><span class="n">01</span><h3>Conversamos</h3><p>Entiendo tu negocio, qué vendes y a quién, y definimos lo que realmente necesitas.</p></li>
+<li><span class="n">02</span><h3>Diseño</h3><p>Te muestro cómo se verá antes de programar, para ajustar sin perder tiempo.</p></li>
+<li><span class="n">03</span><h3>Desarrollo</h3><p>Construyo el sitio o sistema y lo pruebas conmigo en cada avance.</p></li>
+<li><span class="n">04</span><h3>Lanzamiento</h3><p>Lo publicamos en tu dominio y te enseño a manejarlo.</p></li>
+</ol></div></section>
+<section id="contacto"><div class="wrap" style="padding-bottom:72px">
+<div class="cta">
+<h2>¿Tienes un negocio que quiere vender en línea?</h2>
+<p>Cuéntame tu idea y te preparo una propuesta clara: qué necesitas, en cuánto tiempo y cuánto cuesta.</p>
+<div class="ctas" style="margin:0">
+<a class="btn pri" href="https://wa.me/503XXXXXXXX" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.5A8.4 8.4 0 1 1 21 11.5z"/></svg>Escríbeme por WhatsApp</a>
+<a class="btn sec" href="mailto:TU_CORREO">TU_CORREO</a>
+</div></div></div>
+<footer><span>© 2026 Diego · Desarrollo web y ecommerce</span><span>Hecho en El Salvador</span></footer>
+</section>
+</main>
+</body>
+</html>
