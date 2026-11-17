@@ -120,6 +120,9 @@
   .mock .row span{width:60px;height:20px;border-radius:6px}
   .mock .g{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;flex:1}
   .mock .g div{border-radius:8px}
+  .mock img{flex:1;min-height:0;width:100%;height:auto;object-fit:cover;object-position:top;border-radius:0;display:block}
+  a.shot .mock{transition:transform .3s ease}
+  a.shot:hover .mock{transform:translateY(-6px)}
   .proj-info{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;padding:22px 14px 12px}
   .proj-info h3{font-weight:500;font-size:30px}
   .proj-info p{margin-top:8px;font-size:15px;line-height:1.55;color:#55595F;max-width:440px}
@@ -286,11 +289,10 @@
     </div>
     <div class="projects">
 
-      <!-- Captura real: cambia <div class="mock">…</div> por <img src="ambar.jpg" alt="Sitio de Ambar"> -->
       <article class="proj">
-        <div class="shot" style="background:#E2A04A" aria-hidden="true">
-          <div class="mock"><div class="top"><i></i><i></i><i></i></div><div class="in"><div class="row" style="color:#5A3A10">Ambar<span style="background:#E2A04A"></span></div><div class="g"><div style="background:#F6E6CF"></div><div style="background:#F6E6CF"></div><div style="background:#F6E6CF"></div></div></div></div>
-        </div>
+        <a class="shot" href="https://ambarsv.com" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true" style="background:#E2A04A">
+          <div class="mock"><div class="top"><i></i><i></i><i></i></div><img src="img/ambar.jpg" alt="" loading="lazy" width="1440" height="900"></div>
+        </a>
         <div class="proj-info">
           <div><h3>Ambar</h3><p>Tienda en línea para traer productos por encargo desde EE. UU. a El Salvador.</p><div class="tags"><span>Ecommerce</span><span>Marca</span></div></div>
           <a class="go" href="https://ambarsv.com" target="_blank" rel="noopener" aria-label="Visitar ambarsv.com"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
@@ -298,9 +300,9 @@
       </article>
 
       <article class="proj">
-        <div class="shot" style="background:#4642A0" aria-hidden="true">
-          <div class="mock"><div class="top"><i></i><i></i><i></i></div><div class="in"><div class="row" style="color:#1C1A3D">Hogareño<span style="background:#4642A0"></span></div><div class="g"><div style="background:#E4E7F5"></div><div style="background:#E4E7F5"></div><div style="background:#E4E7F5"></div></div></div></div>
-        </div>
+        <a class="shot" href="https://www.xn--hogareo-9za.app" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true" style="background:#4642A0">
+          <div class="mock"><div class="top"><i></i><i></i><i></i></div><img src="img/hogareno.jpg" alt="" loading="lazy" width="1440" height="900"></div>
+        </a>
         <div class="proj-info">
           <div><h3>Hogareño</h3><p>App que conecta hogares salvadoreños con técnicos de confianza. Backend en Supabase.</p><div class="tags"><span>App</span><span>Supabase</span><span>Marca</span></div></div>
           <a class="go" href="https://www.xn--hogareo-9za.app" target="_blank" rel="noopener" aria-label="Visitar hogareño.app"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
@@ -317,9 +319,9 @@
       </article>
 
       <article class="proj">
-        <div class="shot" style="background:#1F4D3A" aria-hidden="true">
-          <div class="mock"><div class="top"><i></i><i></i><i></i></div><div class="in"><div class="row" style="color:#123326">Finanzas Work<span style="background:#1F4D3A"></span></div><div class="g"><div style="background:#E3EEE8"></div><div style="background:#E3EEE8"></div><div style="background:#E3EEE8"></div></div></div></div>
-        </div>
+        <a class="shot" href="https://finanzas.work" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true" style="background:#1F4D3A">
+          <div class="mock"><div class="top"><i></i><i></i><i></i></div><img src="img/finanzas.jpg" alt="" loading="lazy" width="1440" height="900"></div>
+        </a>
         <div class="proj-info">
           <div><h3>Finanzas Work</h3><p>Ordena tus finanzas separándolas por proyectos: emprendimiento, personales y más.</p><div class="tags"><span>Web app</span><span>Finanzas</span></div></div>
           <a class="go" href="https://finanzas.work" target="_blank" rel="noopener" aria-label="Visitar finanzas.work"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
