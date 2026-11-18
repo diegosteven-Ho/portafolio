@@ -64,7 +64,7 @@ def pagina(p):
     admin = '\n'.join(f'<li><b>{e(t)}</b><span>{e(d)}</span></li>' for t, d in p['admin'])
     tags = ''.join(f'<span>{e(t)}</span>' for t in p['tags'])
     otros = '\n'.join(
-        f'<a class="other" href="{o["id"]}.html"><i style="background:{o["color"]}">{e(o["name"][0].upper())}</i><span><b>{e(o["name"])}</b><small>{e(o["sub"])}</small></span></a>'
+        f'<a class="other" href="{o["id"]}.html"><img src="../img/logos/{o["id"]}.png" alt="" width="52" height="52"><span><b>{e(o["name"])}</b><small>{e(o["sub"])}</small></span></a>'
         for o in PROYECTOS if o['id'] != p['id'])
     return f'''<!doctype html>
 <html lang="es">
@@ -88,7 +88,7 @@ def pagina(p):
 
 <main class="wrap">
   <section class="app-head">
-    <div class="icon" aria-hidden="true">{e(p['name'][0].upper())}</div>
+    <img class="icon" src="../img/logos/{p['id']}.png" alt="Logo de {e(p['name'])}" width="128" height="128">
     <div class="meta">
       <h1>{e(p['name'])}</h1>
       <p class="sub">{e(p['sub'])}</p>

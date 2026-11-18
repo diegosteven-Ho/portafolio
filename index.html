@@ -75,7 +75,9 @@
   .clients h4{margin:0 0 18px;text-align:right;font-family:'Inter Tight',sans-serif;font-weight:500;font-size:17px;letter-spacing:-.02em}
   .logos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 26px;justify-items:end}
   .logos span{display:flex;align-items:center;gap:8px;font-family:'Inter Tight',sans-serif;font-weight:600;font-size:18px;color:#55595F;letter-spacing:-.02em}
-  .logos i{width:16px;height:16px;border-radius:4px;background:#55595F;display:inline-block}
+  .logos a{display:flex;align-items:center;gap:8px;font-family:'Inter Tight',sans-serif;font-weight:600;font-size:18px;color:#55595F;letter-spacing:-.02em;min-height:32px}
+  .logos a:hover{color:var(--ink)}
+  .logos img{width:22px;height:22px;border-radius:6px;flex:none}
 
   .wordmark{position:absolute;z-index:0;left:0;right:0;bottom:-.18em;text-align:center;font-family:'Inter Tight',sans-serif;font-weight:500;font-size:clamp(120px,27vw,420px);line-height:1;letter-spacing:-.06em;
             background:linear-gradient(180deg,#fff 0%,rgba(255,255,255,.55) 45%,rgba(220,222,225,0) 80%);-webkit-background-clip:text;background-clip:text;color:transparent;pointer-events:none;user-select:none}
@@ -180,7 +182,7 @@
     .pill-dark{padding-left:22px}
     .pill-dark i{width:40px;height:40px}
     .pill-gray{padding:0 22px}
-    .logos span{font-size:16px}
+    .logos a{font-size:16px}
     /* secciones */
     .sec-head{margin-bottom:32px;gap:14px}
     .sec-head h2{font-size:clamp(34px,10vw,44px)}
@@ -266,10 +268,10 @@
       <div class="clients">
         <h4>Proyectos</h4>
         <div class="logos">
-          <span><i style="background:#D9902F"></i>Ambar</span>
-          <span><i style="background:#4642A0"></i>Hogareño</span>
-          <span><i style="background:#C9A08E"></i>be.</span>
-          <span><i style="background:#1F4D3A"></i>Finanzas Work</span>
+          <a href="proyectos/ambar.html"><img src="img/logos/ambar.png" alt="" width="22" height="22">Ambar</a>
+          <a href="proyectos/hogareno.html"><img src="img/logos/hogareno.png" alt="" width="22" height="22">Hogareño</a>
+          <a href="proyectos/be.html"><img src="img/logos/be.png" alt="" width="22" height="22">be.</a>
+          <a href="proyectos/finanzas.html"><img src="img/logos/finanzas.png" alt="" width="22" height="22">Finanzas Work</a>
         </div>
       </div>
     </div>
