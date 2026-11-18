@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hogareño — Diego</title>
+<meta name="description" content="Plataforma que conecta hogares salvadoreños con técnicos de confianza. Cada tipo de usuario tiene su propio panel: administrador, recepcionista, profesional y cliente.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="proyecto.css">
+<style>:root{--p:#4642A0;--pink:#1C1A3D}</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-in">
+    <a class="back" href="../index.html#proyectos"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg><span>Proyectos</span></a>
+    <a class="logo" href="../index.html" aria-label="Diego, inicio"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 3h9a8 8 0 0 1 0 16H9v-5h4a3 3 0 0 0 0-6H9v3H4z"/><path d="M4 16h4v5H4z"/></svg>Diego</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="app-head">
+    <div class="icon" aria-hidden="true">H</div>
+    <div class="meta">
+      <h1>Hogareño</h1>
+      <p class="sub">Servicios para el hogar</p>
+      <div class="tags"><span>App</span><span>Supabase</span><span>Marca</span></div>
+    </div>
+    <div class="actions">
+      <a class="btn dark" href="https://www.xn--hogareo-9za.app" target="_blank" rel="noopener">Visitar hogareño.app<i><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></i></a>
+      <a class="btn light" href="../index.html#contacto">Quiero algo así</a>
+    </div>
+  </section>
+
+  <section class="gallery-wrap" aria-label="Vista previa">
+    <div class="sec-title"><h2>Vista previa</h2>
+      <div class="nav-btns"><button type="button" id="prev" aria-label="Anterior"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button><button type="button" id="next" aria-label="Siguiente"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+    </div>
+    <div class="gallery" id="gallery" tabindex="0">
+<figure class="shot"><img src="../img/screens/hog-1.jpg" alt="Buscar profesionales por servicio y lugar" width="390" height="844" loading="eager"><figcaption>Buscar profesionales por servicio y lugar</figcaption></figure>
+<figure class="shot"><img src="../img/screens/hog-2.jpg" alt="Registro de clientes y profesionales" width="390" height="844" loading="eager"><figcaption>Registro de clientes y profesionales</figcaption></figure>
+<figure class="shot"><img src="../img/screens/hog-3.jpg" alt="Crear una solicitud y recibir cotizaciones" width="390" height="844" loading="eager"><figcaption>Crear una solicitud y recibir cotizaciones</figcaption></figure>
+<figure class="shot"><img src="../img/screens/hog-4.jpg" alt="Registro paso a paso" width="390" height="844" loading="lazy"><figcaption>Registro paso a paso</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="about">
+    <p>Plataforma que conecta hogares salvadoreños con técnicos de confianza. Cada tipo de usuario tiene su propio panel: administrador, recepcionista, profesional y cliente.</p>
+  </section>
+
+  <section class="admin">
+    <h2>Desde el panel administrativo puedes</h2>
+    <ul>
+<li><b>Aprobar profesionales</b><span>Revisar cada registro, editar perfiles y ver el historial de trabajos de cada técnico.</span></li>
+<li><b>Seguir las solicitudes</b><span>Ver cada trabajo de principio a fin y su estado.</span></li>
+<li><b>Organizar los servicios</b><span>Categorías, especialidades, clientes y residenciales.</span></li>
+<li><b>Controlar las finanzas</b><span>Comisiones, verificación de pagos, pagos a profesionales, cuentas bancarias e historial.</span></li>
+<li><b>Atender y dar soporte</b><span>Reportes, atención por WhatsApp y solicitudes para eliminar cuentas.</span></li>
+    </ul>
+  </section>
+
+  <section class="others">
+    <h2>Otros proyectos</h2>
+    <div class="other-list">
+<a class="other" href="ambar.html"><i style="background:#E2A04A">A</i><span><b>Ambar</b><small>Ecommerce por encargo</small></span></a>
+<a class="other" href="be.html"><i style="background:#D1AA99">B</i><span><b>be.</b><small>Tienda de activewear</small></span></a>
+<a class="other" href="finanzas.html"><i style="background:#1F4D3A">F</i><span><b>Finanzas Work</b><small>Finanzas por proyecto</small></span></a>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap foot"><span>© 2026 Diego · Desarrollo web y ecommerce</span><a href="../index.html#contacto">Hablemos</a></footer>
+
+<script>
+  const g = document.getElementById('gallery');
+  const step = () => (g.querySelector('.shot')?.offsetWidth || 260) + 16;
+  document.getElementById('prev').onclick = () => g.scrollBy({left: -step(), behavior: 'smooth'});
+  document.getElementById('next').onclick = () => g.scrollBy({left: step(), behavior: 'smooth'});
+</script>
+</body>
+</html>

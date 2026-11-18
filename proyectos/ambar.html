@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ambar — Diego</title>
+<meta name="description" content="Tienda en línea para traer productos por encargo desde EE. UU. a El Salvador. Los clientes compran desde el celular y el dueño maneja todo el negocio desde un solo panel.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="proyecto.css">
+<style>:root{--p:#E2A04A;--pink:#5A3A10}</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-in">
+    <a class="back" href="../index.html#proyectos"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg><span>Proyectos</span></a>
+    <a class="logo" href="../index.html" aria-label="Diego, inicio"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 3h9a8 8 0 0 1 0 16H9v-5h4a3 3 0 0 0 0-6H9v3H4z"/><path d="M4 16h4v5H4z"/></svg>Diego</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="app-head">
+    <div class="icon" aria-hidden="true">A</div>
+    <div class="meta">
+      <h1>Ambar</h1>
+      <p class="sub">Ecommerce por encargo</p>
+      <div class="tags"><span>Ecommerce</span><span>Marca</span><span>Panel de ventas</span></div>
+    </div>
+    <div class="actions">
+      <a class="btn dark" href="https://ambarsv.com" target="_blank" rel="noopener">Visitar ambarsv.com<i><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></i></a>
+      <a class="btn light" href="../index.html#contacto">Quiero algo así</a>
+    </div>
+  </section>
+
+  <section class="gallery-wrap" aria-label="Vista previa">
+    <div class="sec-title"><h2>Vista previa</h2>
+      <div class="nav-btns"><button type="button" id="prev" aria-label="Anterior"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button><button type="button" id="next" aria-label="Siguiente"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+    </div>
+    <div class="gallery" id="gallery" tabindex="0">
+<figure class="shot"><img src="../img/screens/ambar-1.jpg" alt="Inicio con cuenta regresiva del cierre de pedidos" width="390" height="844" loading="eager"><figcaption>Inicio con cuenta regresiva del cierre de pedidos</figcaption></figure>
+<figure class="shot"><img src="../img/screens/ambar-2.jpg" alt="Ficha de producto con notas y precio" width="390" height="844" loading="eager"><figcaption>Ficha de producto con notas y precio</figcaption></figure>
+<figure class="shot"><img src="../img/screens/ambar-3.jpg" alt="Carrito de compras" width="390" height="844" loading="eager"><figcaption>Carrito de compras</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="about">
+    <p>Tienda en línea para traer productos por encargo desde EE. UU. a El Salvador. Los clientes compran desde el celular y el dueño maneja todo el negocio desde un solo panel.</p>
+  </section>
+
+  <section class="admin">
+    <h2>Desde el panel administrativo puedes</h2>
+    <ul>
+<li><b>Ver sus ventas al día</b><span>Vendido, cobrado, por cobrar, ticket promedio y unidades vendidas por periodo.</span></li>
+<li><b>Entender qué funciona</b><span>Gráficas de ventas por semana y por categoría, y los productos más pedidos.</span></li>
+<li><b>Manejar pedidos</b><span>Revisar cada pedido por estado (pendiente, confirmado, entregado o cancelado) y editarlo.</span></li>
+<li><b>Administrar el catálogo</b><span>Crear y editar productos, ponerlos en oferta, marcar si hay stock o es por encargo, y mostrarlos u ocultarlos.</span></li>
+<li><b>Programar el cierre de pedidos</b><span>Los clientes ven una cuenta regresiva hasta la fecha límite.</span></li>
+<li><b>Escuchar a los clientes</b><span>Recibir las sugerencias de productos que piden.</span></li>
+    </ul>
+  </section>
+
+  <section class="others">
+    <h2>Otros proyectos</h2>
+    <div class="other-list">
+<a class="other" href="hogareno.html"><i style="background:#4642A0">H</i><span><b>Hogareño</b><small>Servicios para el hogar</small></span></a>
+<a class="other" href="be.html"><i style="background:#D1AA99">B</i><span><b>be.</b><small>Tienda de activewear</small></span></a>
+<a class="other" href="finanzas.html"><i style="background:#1F4D3A">F</i><span><b>Finanzas Work</b><small>Finanzas por proyecto</small></span></a>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap foot"><span>© 2026 Diego · Desarrollo web y ecommerce</span><a href="../index.html#contacto">Hablemos</a></footer>
+
+<script>
+  const g = document.getElementById('gallery');
+  const step = () => (g.querySelector('.shot')?.offsetWidth || 260) + 16;
+  document.getElementById('prev').onclick = () => g.scrollBy({left: -step(), behavior: 'smooth'});
+  document.getElementById('next').onclick = () => g.scrollBy({left: step(), behavior: 'smooth'});
+</script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+:root{--bg:#DCDEE1;--ink:#111214;--soft:#C9CCD0;--card:#E9EAEC;--muted:#55595F;--accent:#D9792F}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+h1,h2{font-family:'Inter Tight',Inter,sans-serif;margin:0;letter-spacing:-.035em;font-weight:500}
+p{margin:0}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 32px}
+
+/* barra superior */
+.top{position:sticky;top:0;z-index:10;background:rgba(220,222,225,.94);backdrop-filter:blur(12px)}
+.top-in{display:flex;align-items:center;justify-content:space-between;padding:14px 32px}
+.back{display:inline-flex;align-items:center;gap:8px;height:44px;padding:0 16px 0 12px;border-radius:999px;background:var(--card);font-size:15px;font-weight:500}
+.back:hover{background:#fff}
+.logo{display:flex;align-items:center;gap:8px;font-family:'Inter Tight',sans-serif;font-weight:600;font-size:22px;letter-spacing:-.03em}
+.logo svg{width:22px;height:22px}
+
+/* cabecera tipo App Store */
+.app-head{display:grid;grid-template-columns:128px 1fr auto;gap:28px;align-items:center;padding:48px 0 36px;border-bottom:1px solid rgba(0,0,0,.08)}
+.icon{width:128px;height:128px;border-radius:30px;background:var(--p);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Inter Tight',sans-serif;font-weight:600;font-size:60px;letter-spacing:-.04em;box-shadow:0 1px 0 rgba(255,255,255,.35) inset,0 18px 40px rgba(0,0,0,.14)}
+.meta h1{font-size:clamp(34px,4.4vw,52px);line-height:1}
+.sub{margin-top:8px;font-size:17px;color:var(--muted)}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.tags span{font-size:12px;font-weight:500;padding:6px 12px;border-radius:999px;background:var(--card);color:#3A3D42}
+.actions{display:flex;flex-direction:column;gap:10px;align-items:stretch}
+.btn{display:inline-flex;align-items:center;justify-content:space-between;gap:14px;height:56px;padding:0 8px 0 24px;border-radius:999px;font-size:15px;font-weight:500;white-space:nowrap}
+.btn.dark{background:var(--ink);color:#fff}
+.btn.dark i{width:40px;height:40px;border-radius:50%;background:#fff;color:var(--ink);display:flex;align-items:center;justify-content:center;transition:transform .2s}
+.btn.dark:hover i{transform:translate(2px,-2px)}
+.btn.light{background:var(--soft);justify-content:center;padding:0 24px}
+.btn.light:hover{background:#BCC0C5}
+
+/* galería */
+.gallery-wrap{padding:36px 0 8px}
+.sec-title{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+.sec-title h2,.admin h2,.others h2{font-size:26px}
+.nav-btns{display:flex;gap:8px}
+.nav-btns button{width:44px;height:44px;border-radius:50%;background:var(--card);display:flex;align-items:center;justify-content:center}
+.nav-btns button:hover{background:#fff}
+.gallery{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 32px;padding:6px 32px 24px;margin:0 -32px;scrollbar-width:none}
+.gallery::-webkit-scrollbar{display:none}
+.gallery:focus-visible{outline:2px solid var(--ink);outline-offset:-2px;border-radius:12px}
+.shot{flex:none;width:250px;margin:0;scroll-snap-align:start}
+.shot img{display:block;width:100%;height:auto;aspect-ratio:390/844;object-fit:cover;object-position:top;border-radius:28px;background:var(--card);box-shadow:0 0 0 1px rgba(0,0,0,.06),0 14px 34px rgba(0,0,0,.12)}
+.shot figcaption{margin-top:12px;font-size:13px;line-height:1.45;color:var(--muted);padding:0 4px}
+
+/* texto */
+.about{padding:20px 0 36px;border-bottom:1px solid rgba(0,0,0,.08)}
+.about p{font-size:18px;line-height:1.65;max-width:760px;color:#2A2C30}
+.admin{padding:40px 0;border-bottom:1px solid rgba(0,0,0,.08)}
+.admin ul{list-style:none;margin:22px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.admin li{background:var(--card);border-radius:22px;padding:22px 24px;display:flex;flex-direction:column;gap:6px;box-shadow:0 1px 0 rgba(255,255,255,.7) inset}
+.admin li b{font-family:'Inter Tight',sans-serif;font-weight:600;font-size:18px;letter-spacing:-.02em;display:flex;align-items:center;gap:10px}
+.admin li b::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--p);flex:none}
+.admin li span{font-size:15px;line-height:1.55;color:var(--muted)}
+
+/* otros proyectos */
+.others{padding:40px 0 56px}
+.other-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:20px}
+.other{display:flex;align-items:center;gap:14px;padding:14px;border-radius:20px;background:var(--card)}
+.other:hover{background:#fff}
+.other i{width:52px;height:52px;border-radius:14px;color:#fff;font-style:normal;display:flex;align-items:center;justify-content:center;font-family:'Inter Tight',sans-serif;font-weight:600;font-size:24px;flex:none}
+.other b{display:block;font-family:'Inter Tight',sans-serif;font-weight:600;font-size:17px;letter-spacing:-.02em}
+.other small{display:block;margin-top:2px;font-size:13px;color:var(--muted)}
+
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-top:28px;padding-bottom:48px;font-size:14px;color:var(--muted);border-top:1px solid rgba(0,0,0,.08)}
+.foot a{color:var(--ink);font-weight:500}
+
+@media (max-width:860px){
+  .app-head{grid-template-columns:96px 1fr;gap:20px}
+  .icon{width:96px;height:96px;border-radius:24px;font-size:44px}
+  .actions{grid-column:1 / -1;flex-direction:row}
+  .actions .btn{flex:1}
+  .admin ul,.other-list{grid-template-columns:1fr}
+}
+@media (max-width:560px){
+  .wrap{padding:0 20px}
+  .top-in{padding:10px 20px}
+  .app-head{grid-template-columns:84px 1fr;gap:16px;padding:28px 0 26px}
+  .icon{width:84px;height:84px;border-radius:20px;font-size:38px}
+  .meta h1{font-size:30px}
+  .sub{font-size:15px;margin-top:4px}
+  .tags{margin-top:10px}
+  .actions{flex-direction:column}
+  .actions .btn{flex:none}
+  .gallery{padding:6px 20px 20px;margin:0 -20px;scroll-padding:0 20px;gap:12px}
+  .shot{width:72vw;max-width:260px}
+  .nav-btns{display:none}
+  .about p{font-size:16px}
+  .admin li{padding:18px 20px}
+  .foot{flex-direction:column}
+}

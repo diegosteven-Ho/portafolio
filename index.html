@@ -138,41 +138,11 @@
   footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding:36px 0 48px;font-size:14px;color:#55595F}
 
 
-  /* ---------- Detalle de proyecto ---------- */
-  button.shot{width:100%;border:0;cursor:pointer;text-align:left;font:inherit}
-  button.shot:hover .mock{transform:translateY(-6px)}
-  button.shot .mock{transition:transform .3s ease}
+  /* ---------- Tarjetas de proyecto ---------- */
   .proj{cursor:pointer}
-  .go{border:0;cursor:pointer;transition:transform .2s}
-  .proj:hover .go{transform:rotate(90deg)}
-  .pd{border:0;padding:0;margin:auto;width:min(640px,calc(100% - 32px));max-height:calc(100% - 48px);border-radius:28px;background:var(--card);color:var(--ink);box-shadow:0 30px 80px rgba(0,0,0,.25);overflow:hidden}
-  .pd::backdrop{background:rgba(17,18,20,.45);backdrop-filter:blur(4px)}
-  .pd[open]{display:flex;flex-direction:column;animation:pdIn .2s ease}
-  @keyframes pdIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
-  .pd-head{position:relative;padding:22px 22px 0}
-  .pd-img{height:210px;border-radius:20px;padding:18px 18px 0;display:flex;align-items:flex-end;overflow:hidden}
-  .pd-img img{width:100%;height:100%;object-fit:cover;object-position:top;border-radius:10px 10px 0 0;box-shadow:0 -10px 40px rgba(0,0,0,.2);display:block}
-  .pd-close{position:absolute;top:32px;right:32px;width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.92);color:var(--ink);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,.12)}
-  .pd-body{padding:22px 30px 30px;overflow-y:auto;outline:none}
-  .pd-body h3{font-weight:500;font-size:34px}
-  .pd-intro{margin-top:8px;font-size:15px;line-height:1.6;color:#55595F}
-  .pd-label{margin-top:26px;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#7A7E84}
-  .pd-list{list-style:none;margin:14px 0 0;padding:0;display:flex;flex-direction:column;gap:12px}
-  .pd-list li{display:grid;grid-template-columns:22px 1fr;gap:12px;font-size:15px;line-height:1.5;color:#2A2C30}
-  .pd-list li::before{content:"";width:8px;height:8px;margin:7px 0 0 6px;border-radius:50%;background:var(--accent)}
-  .pd-list b{font-weight:600;color:var(--ink)}
-  .pd-foot{margin-top:28px;display:flex;flex-wrap:wrap;gap:10px}
-  @media (max-width:720px){
-    .pd{width:100%;max-width:none;margin:auto 0 0;max-height:92%;border-radius:26px 26px 0 0}
-    .pd[open]{animation:pdUp .2s ease}
-    @keyframes pdUp{from{transform:translateY(40px);opacity:0}to{transform:none;opacity:1}}
-    .pd-head{padding:14px 14px 0}
-    .pd-img{height:160px;padding:14px 14px 0}
-    .pd-close{top:22px;right:22px}
-    .pd-body{padding:20px 20px 28px}
-    .pd-body h3{font-size:28px}
-    .pd-foot .pill{flex:1;justify-content:space-between}
-  }
+  .proj:hover .go{transform:translateX(4px)}
+  .go{transition:transform .2s}
+  a.shot{display:flex}
 
   /* ---------- Responsive ---------- */
   @media (max-width:1080px){
@@ -353,42 +323,42 @@
     <div class="projects">
 
       <article class="proj">
-        <button type="button" class="shot" data-p="ambar" tabindex="-1" aria-hidden="true" style="background:#E2A04A">
+        <a class="shot" href="proyectos/ambar.html" data-p="ambar" tabindex="-1" aria-hidden="true" style="background:#E2A04A">
           <div class="mock"><div class="top"><i></i><i></i><i></i></div><img src="img/ambar.jpg" alt="" loading="lazy" width="1440" height="900"></div>
-        </button>
+        </a>
         <div class="proj-info">
           <div><h3>Ambar</h3><p>Tienda en línea para traer productos por encargo desde EE. UU. a El Salvador.</p><div class="tags"><span>Ecommerce</span><span>Marca</span></div></div>
-          <button type="button" class="go" data-p="ambar" aria-haspopup="dialog" aria-label="Ver detalles de Ambar"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></button>
+          <a class="go" href="proyectos/ambar.html" aria-label="Ver Ambar"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
       </article>
 
       <article class="proj">
-        <button type="button" class="shot" data-p="hogareno" tabindex="-1" aria-hidden="true" style="background:#4642A0">
+        <a class="shot" href="proyectos/hogareno.html" data-p="hogareno" tabindex="-1" aria-hidden="true" style="background:#4642A0">
           <div class="mock"><div class="top"><i></i><i></i><i></i></div><img src="img/hogareno.jpg" alt="" loading="lazy" width="1440" height="900"></div>
-        </button>
+        </a>
         <div class="proj-info">
           <div><h3>Hogareño</h3><p>App que conecta hogares salvadoreños con técnicos de confianza. Backend en Supabase.</p><div class="tags"><span>App</span><span>Supabase</span><span>Marca</span></div></div>
-          <button type="button" class="go" data-p="hogareno" aria-haspopup="dialog" aria-label="Ver detalles de Hogareño"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></button>
+          <a class="go" href="proyectos/hogareno.html" aria-label="Ver Hogareño"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
       </article>
 
       <article class="proj">
-        <button type="button" class="shot" data-p="be" tabindex="-1" aria-hidden="true" style="background:#D1AA99">
+        <a class="shot" href="proyectos/be.html" data-p="be" tabindex="-1" aria-hidden="true" style="background:#D1AA99">
           <div class="mock"><div class="top"><i></i><i></i><i></i></div><img src="img/beoficial.jpg" alt="" loading="lazy" width="1440" height="900"></div>
-        </button>
+        </a>
         <div class="proj-info">
           <div><h3>be.</h3><p>Tienda en línea de activewear: leggings, shorts, tops y sports bras, con cuentas de cliente y seguimiento de compras.</p><div class="tags"><span>Ecommerce</span><span>Moda</span></div></div>
-          <button type="button" class="go" data-p="be" aria-haspopup="dialog" aria-label="Ver detalles de be."><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></button>
+          <a class="go" href="proyectos/be.html" aria-label="Ver be."><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
       </article>
 
       <article class="proj">
-        <button type="button" class="shot" data-p="finanzas" tabindex="-1" aria-hidden="true" style="background:#1F4D3A">
+        <a class="shot" href="proyectos/finanzas.html" data-p="finanzas" tabindex="-1" aria-hidden="true" style="background:#1F4D3A">
           <div class="mock"><div class="top"><i></i><i></i><i></i></div><img src="img/finanzas.jpg" alt="" loading="lazy" width="1440" height="900"></div>
-        </button>
+        </a>
         <div class="proj-info">
           <div><h3>Finanzas Work</h3><p>Ordena tus finanzas separándolas por proyectos: emprendimiento, personales y más.</p><div class="tags"><span>Web app</span><span>Finanzas</span></div></div>
-          <button type="button" class="go" data-p="finanzas" aria-haspopup="dialog" aria-label="Ver detalles de Finanzas Work"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></button>
+          <a class="go" href="proyectos/finanzas.html" aria-label="Ver Finanzas Work"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
       </article>
 
@@ -434,23 +404,6 @@
 </section>
 </main>
 
-<dialog class="pd" id="pd" aria-labelledby="pdTitle">
-  <div class="pd-head">
-    <div class="pd-img" id="pdImg"><img id="pdShot" src="" alt=""></div>
-    <button type="button" class="pd-close" id="pdClose" aria-label="Cerrar"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
-  </div>
-  <div class="pd-body" tabindex="-1" autofocus>
-    <h3 id="pdTitle"></h3>
-    <p class="pd-intro" id="pdIntro"></p>
-    <p class="pd-label">Desde el panel administrativo puedes</p>
-    <ul class="pd-list" id="pdList"></ul>
-    <div class="pd-foot">
-      <a class="pill pill-dark" id="pdLink" href="#" target="_blank" rel="noopener">Visitar sitio
-        <i><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></i></a>
-      <a class="pill pill-gray" href="#contacto" id="pdContact">Quiero algo así</a>
-    </div>
-  </div>
-</dialog>
 
 
 <script>
@@ -493,65 +446,11 @@
   document.getElementById('next').onclick = () => show(s+1);
   show(0);
 
-  // Detalle de cada proyecto
-  const P = {
-    ambar: { name:'Ambar', url:'https://ambarsv.com', label:'ambarsv.com', img:'img/ambar.jpg', bg:'#E2A04A',
-      intro:'Tienda en línea de productos por encargo desde EE. UU. El dueño maneja todo el negocio desde un solo panel.',
-      items:[
-        ['Ver sus ventas al día:','vendido, cobrado, por cobrar, ticket promedio y unidades vendidas por periodo.'],
-        ['Entender qué funciona:','gráficas de ventas por semana y por categoría, y los productos más pedidos.'],
-        ['Manejar pedidos:','revisar cada pedido por estado (pendiente, confirmado, entregado o cancelado) y editarlo.'],
-        ['Administrar el catálogo:','crear y editar productos, ponerlos en oferta, marcar si hay stock o es por encargo, y mostrarlos u ocultarlos.'],
-        ['Programar el cierre de pedidos:','los clientes ven una cuenta regresiva hasta la fecha límite.'],
-        ['Escuchar a los clientes:','recibir las sugerencias de productos que piden.']
-      ]},
-    hogareno: { name:'Hogareño', url:'https://www.xn--hogareo-9za.app', label:'hogareño.app', img:'img/hogareno.jpg', bg:'#4642A0',
-      intro:'Plataforma que conecta hogares con técnicos de confianza. Cada tipo de usuario tiene su propio panel: administrador, recepcionista, profesional y cliente.',
-      items:[
-        ['Aprobar profesionales:','revisar cada registro, editar perfiles y ver el historial de trabajos de cada técnico.'],
-        ['Seguir las solicitudes:','ver cada trabajo de principio a fin y su estado.'],
-        ['Organizar los servicios:','categorías, especialidades, clientes y residenciales.'],
-        ['Controlar las finanzas:','comisiones, verificación de pagos, pagos a profesionales, cuentas bancarias e historial.'],
-        ['Atender y dar soporte:','reportes, atención por WhatsApp y solicitudes para eliminar cuentas.']
-      ]},
-    be: { name:'be.', url:'https://beoficial.com', label:'beoficial.com', img:'img/beoficial.jpg', bg:'#D1AA99',
-      intro:'Tienda en línea de activewear con marcas como DFYNE y Gymshark, organizada por líneas de producto.',
-      items:[
-        ['Administrar el catálogo:','productos por marca y por línea (Vision, Dynamic, Impact, Defy), con sus fotos y tallas.'],
-        ['Recibir pedidos:','cada compra llega con los datos y la dirección de entrega del cliente.'],
-        ['Conocer a sus clientes:','cuentas registradas con su historial de compras.']
-      ]},
-    finanzas: { name:'Finanzas Work', url:'https://finanzas.work', label:'finanzas.work', img:'img/finanzas.jpg', bg:'#1F4D3A',
-      intro:'App para llevar el dinero separado por proyecto: el negocio, lo personal y los ahorros, cada uno con sus cuentas.',
-      items:[
-        ['Separar el dinero por proyecto:','cada negocio, gasto personal o meta tiene su propio saldo.'],
-        ['Anotar como hablas:','escribes “gasté $20 de gas” y la app registra el movimiento y elige la categoría.'],
-        ['Trabajar en equipo:','invitar a un socio o contador con un enlace y darle un rol: dueño, administrador, miembro o solo lectura.'],
-        ['Controlar permisos:','cada rol define quién puede ver o editar.'],
-        ['Revisar la actividad:','un historial muestra quién hizo cada cambio.']
-      ]}
-  };
-  const pd = document.getElementById('pd');
-  function openP(k){
-    const d = P[k]; if(!d) return;
-    document.getElementById('pdTitle').textContent = d.name;
-    document.getElementById('pdIntro').textContent = d.intro;
-    document.getElementById('pdImg').style.background = d.bg;
-    const img = document.getElementById('pdShot'); img.src = d.img; img.alt = 'Captura de ' + d.name;
-    const link = document.getElementById('pdLink'); link.href = d.url;
-    link.firstChild.textContent = 'Visitar ' + d.label + ' ';
-    const ul = document.getElementById('pdList'); ul.replaceChildren();
-    d.items.forEach(([b,t]) => { const li=document.createElement('li'); const sp=document.createElement('span'); const bb=document.createElement('b'); bb.textContent=b+' '; sp.append(bb, t); li.append(sp); ul.append(li); });
-    pd.showModal();
-    document.querySelector('.pd-body').scrollTop = 0;
-  }
+  // Toda la tarjeta abre la página del proyecto
   document.querySelectorAll('.proj').forEach(card => {
-    const k = card.querySelector('[data-p]')?.dataset.p; if(!k) return;
-    card.addEventListener('click', e => { if(e.target.closest('a')) return; openP(k); });
+    const a = card.querySelector('a.go'); if(!a) return;
+    card.addEventListener('click', e => { if(!e.target.closest('a')) location.href = a.href; });
   });
-  document.getElementById('pdClose').onclick = () => pd.close();
-  document.getElementById('pdContact').onclick = () => pd.close();
-  pd.addEventListener('click', e => { if(e.target === pd) pd.close(); });
 
   setInterval(() => show(s+1), 5000);
 
