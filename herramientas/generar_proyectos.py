@@ -40,7 +40,7 @@ PROYECTOS = [
   dict(id='finanzas', name='Finanzas Work', sub='Finanzas por proyecto', url='https://finanzas.work', label='finanzas.work',
        color='#1F4D3A', ink='#123326', tags=['Web app', 'Finanzas', 'Equipos'],
        intro='App para llevar el dinero separado por proyecto: el negocio, lo personal y los ahorros, cada uno con sus cuentas.',
-       screens=[('fin-app-1', 'Saldo total, lo que entró y salió, y anotar un gasto escribiendo'), ('fin-app-2', 'Movimientos del mes y en qué se fue el dinero')],
+       screens=[('fin-app-1', 'Saldo total, lo que entró y salió, y anotar un gasto escribiendo'), ('fin-app-2', 'Movimientos del mes y en qué se fue el dinero'), ('fin-app-3', 'Plan de ahorro con metas y lo que te deben')],
        admin=[
          ('Separar el dinero por proyecto', 'Cada negocio, gasto personal o meta tiene su propio saldo.'),
          ('Anotar como hablas', 'Escribes “gasté $20 de gas” y la app registra el movimiento y elige la categoría.'),
