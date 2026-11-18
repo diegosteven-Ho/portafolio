@@ -141,6 +141,10 @@
 
 
   /* ---------- Tarjetas de proyecto ---------- */
+  .shot.has-phone{justify-content:center;padding:28px 28px 0}
+  .phone{width:200px;height:100%;background:#111214;border-radius:30px 30px 0 0;padding:8px 8px 0;box-shadow:0 -10px 40px rgba(0,0,0,.25);transition:transform .3s ease}
+  .phone img{display:block;width:100%;height:100%;object-fit:cover;object-position:top;border-radius:23px 23px 0 0}
+  a.shot:hover .phone{transform:translateY(-6px)}
   .proj{cursor:pointer}
   .proj:hover .go{transform:translateX(4px)}
   .go{transition:transform .2s}
@@ -195,6 +199,8 @@
     .projects{gap:12px}
     .proj{border-radius:26px;padding:10px}
     .shot{height:200px;padding:18px 18px 0;border-radius:18px}
+    .phone{width:150px;border-radius:24px 24px 0 0;padding:6px 6px 0}
+    .phone img{border-radius:19px 19px 0 0}
     .mock .top{height:20px}.mock .top i{width:6px;height:6px}
     .proj-info{padding:18px 10px 10px}
     .proj-info h3{font-size:24px}
@@ -325,8 +331,8 @@
     <div class="projects">
 
       <article class="proj">
-        <a class="shot" href="proyectos/ambar.html" data-p="ambar" tabindex="-1" aria-hidden="true" style="background:#E2A04A">
-          <div class="mock"><div class="top"><i></i><i></i><i></i></div><img src="img/ambar.jpg" alt="" loading="lazy" width="1440" height="900"></div>
+        <a class="shot has-phone" href="proyectos/ambar.html" data-p="ambar" tabindex="-1" aria-hidden="true" style="background:#E2A04A">
+          <div class="phone"><img src="img/screens/ambar-1.jpg" alt="" loading="lazy" width="390" height="844"></div>
         </a>
         <div class="proj-info">
           <div><h3>Ambar</h3><p>Tienda en línea para traer productos por encargo desde EE. UU. a El Salvador.</p><div class="tags"><span>Ecommerce</span><span>Marca</span></div></div>
@@ -345,8 +351,8 @@
       </article>
 
       <article class="proj">
-        <a class="shot" href="proyectos/be.html" data-p="be" tabindex="-1" aria-hidden="true" style="background:#D1AA99">
-          <div class="mock"><div class="top"><i></i><i></i><i></i></div><img src="img/beoficial.jpg" alt="" loading="lazy" width="1440" height="900"></div>
+        <a class="shot has-phone" href="proyectos/be.html" data-p="be" tabindex="-1" aria-hidden="true" style="background:#D1AA99">
+          <div class="phone"><img src="img/screens/be-1.jpg" alt="" loading="lazy" width="390" height="844"></div>
         </a>
         <div class="proj-info">
           <div><h3>be.</h3><p>Tienda en línea de activewear: leggings, shorts, tops y sports bras, con cuentas de cliente y seguimiento de compras.</p><div class="tags"><span>Ecommerce</span><span>Moda</span></div></div>
