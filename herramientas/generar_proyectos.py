@@ -8,7 +8,7 @@ PROYECTOS = [
   dict(id='ambar', name='Ambar', sub='Ecommerce por encargo', url='https://ambarsv.com', label='ambarsv.com',
        color='#E2A04A', ink='#5A3A10', tags=['Ecommerce', 'Marca', 'Panel de ventas'],
        intro='Tienda en línea para traer productos por encargo desde EE. UU. a El Salvador. Los clientes compran desde el celular y el dueño maneja todo el negocio desde un solo panel.',
-       screens=[('ambar-1', 'Inicio con cuenta regresiva del cierre de pedidos'), ('ambar-2', 'Ficha de producto con notas y precio'), ('ambar-3', 'Carrito de compras')],
+       screens=[('ambar-1', 'Inicio con cuenta regresiva del cierre de pedidos'), ('ambar-2', 'Ficha de producto con notas y precio'), ('ambar-3', 'Carrito con productos, total y fecha de entrega')],
        admin=[
          ('Ver sus ventas al día', 'Vendido, cobrado, por cobrar, ticket promedio y unidades vendidas por periodo.'),
          ('Entender qué funciona', 'Gráficas de ventas por semana y por categoría, y los productos más pedidos.'),
