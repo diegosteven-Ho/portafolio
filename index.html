@@ -140,6 +140,29 @@
   footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding:36px 0 48px;font-size:14px;color:#55595F}
 
 
+  /* ---------- Problemas ---------- */
+  .probs{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:44px 14px;align-items:start}
+  .prob{display:flex;flex-direction:column}
+  .prob-q{background:var(--card);box-shadow:0 1px 0 rgba(255,255,255,.7) inset;border-radius:28px;padding:30px 30px 46px;display:flex;flex-direction:column;gap:10px;transition:border-radius .2s}
+  .prob h3{font-weight:500;font-size:26px;line-height:1.1}
+  .prob p{font-size:15px;line-height:1.6;color:#55595F}
+  .tag-q,.tag-a{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+  .tag-q{color:#7A7E84}
+  .tag-a{color:var(--accent)}
+  .prob-ar{align-self:center;width:56px;height:56px;margin:-28px 0 0;position:relative;z-index:1;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(217,121,47,.35);transition:transform .2s,background .2s}
+  .prob-ar:hover{background:#C66A23}
+  .prob-ar svg{transition:transform .2s}
+  .prob-a{display:grid;grid-template-rows:0fr;margin-top:-28px;transition:grid-template-rows .25s ease}
+  .prob-a-clip{overflow:hidden;min-height:0}
+  .prob-a-in{background:var(--ink);color:#fff;border-radius:0 0 28px 28px;padding:42px 30px 22px;display:flex;flex-direction:column;gap:10px}
+  .prob-a p{color:#A9ADB3}
+  .prob-a a{padding-top:8px;font-size:15px;font-weight:500;color:#fff;align-self:flex-start;min-height:44px;display:flex;align-items:center}
+  .prob-a a:hover{color:var(--accent)}
+  .prob.open .prob-q{border-radius:28px 28px 0 0}
+  .prob.open .prob-a{grid-template-rows:1fr}
+  .prob.open .prob-ar svg{transform:rotate(180deg)}
+  @media (prefers-reduced-motion:reduce){.prob-a,.prob-ar svg,.prob-q{transition:none}}
+
   /* ---------- Tarjetas de proyecto ---------- */
   .shot.has-phone{justify-content:center;padding:28px 28px 0}
   .phone{width:200px;height:100%;background:#111214;border-radius:30px 30px 0 0;padding:8px 8px 0;box-shadow:0 -10px 40px rgba(0,0,0,.25);transition:transform .3s ease}
@@ -215,6 +238,13 @@
     .contact .ctas .pill{justify-content:space-between}
     .contact .ctas .pill-gray{justify-content:center;font-size:14px}
     footer{flex-direction:column;gap:6px}
+    .probs{grid-template-columns:1fr;gap:38px}
+    .prob-q{border-radius:22px;padding:22px 22px 38px}
+    .prob.open .prob-q{border-radius:22px 22px 0 0}
+    .prob-ar{width:48px;height:48px;margin-top:-24px}
+    .prob-a{margin-top:-24px}
+    .prob-a-in{border-radius:0 0 22px 22px;padding:36px 22px 16px}
+    .prob h3{font-size:22px}
   }
 </style>
 </head>
@@ -228,6 +258,7 @@
     </a>
     <nav class="menu" id="menu" aria-label="Principal">
       <a href="#inicio" class="active">Inicio</a>
+      <a href="#problemas">Problemas</a>
       <a href="#servicios">Servicios</a>
       <a href="#proyectos">Proyectos</a>
       <a href="#proceso">Proceso</a>
@@ -282,11 +313,43 @@
       </div>
     </div>
   </div>
-  <div class="wordmark" aria-hidden="true">DIEGO</div>
+  <div class="wordmark" aria-hidden="true">CREA</div>
+</section>
+
+<!-- ================= PROBLEMAS ================= -->
+<section class="block" id="problemas">
+  <div class="container">
+    <div class="sec-head">
+      <div><small>Problemas que resuelvo</small><h2>Lo que frena<br><span class="fade">a todo negocio.</span></h2></div>
+      <p>Casi todos los emprendimientos chocan con lo mismo. Así lo resuelvo con tecnología hecha a la medida.</p>
+    </div>
+    <ol class="probs">
+      <li class="prob">
+        <div class="prob-q"><span class="tag-q">Problema 01</span><h3>Los pedidos se pierden en WhatsApp</h3><p>Llegan por chat, se anotan en una libreta y al final nadie sabe qué está pagado, qué falta entregar o a quién se le olvidó responder.</p></div>
+        <button type="button" class="prob-ar" aria-expanded="false" aria-controls="sol-1" aria-label="Ver la solución"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></button>
+        <div class="prob-a" id="sol-1" inert><div class="prob-a-clip"><div class="prob-a-in"><span class="tag-a">La solución</span><h3>Una tienda en línea donde el cliente pide solo</h3><p>Cada pedido entra con sus datos y queda en un panel por estado: pendiente, confirmado, entregado. Ya no se pierde ninguno.</p><a href="proyectos/ambar.html">Así lo resolví en Ambar →</a></div></div></div>
+      </li>
+      <li class="prob">
+        <div class="prob-q"><span class="tag-q">Problema 02</span><h3>No sabes cuánto estás ganando</h3><p>El dinero del negocio y el personal se mezclan, y a fin de mes no sabes si ganaste o solo te movió dinero.</p></div>
+        <button type="button" class="prob-ar" aria-expanded="false" aria-controls="sol-2" aria-label="Ver la solución"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></button>
+        <div class="prob-a" id="sol-2" inert><div class="prob-a-clip"><div class="prob-a-in"><span class="tag-a">La solución</span><h3>Tus números claros, separados por proyecto</h3><p>Cada negocio lleva su propio saldo, ves lo que entró, lo que salió y en qué se fue, y anotas un gasto en segundos.</p><a href="proyectos/finanzas.html">Así lo resolví en Finanzas Work →</a></div></div></div>
+      </li>
+      <li class="prob">
+        <div class="prob-q"><span class="tag-q">Problema 03</span><h3>Vendes lo que ya no tienes</h3><p>El inventario está en la cabeza o en un Excel viejo: prometes producto agotado o se queda guardado lo que no se mueve.</p></div>
+        <button type="button" class="prob-ar" aria-expanded="false" aria-controls="sol-3" aria-label="Ver la solución"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></button>
+        <div class="prob-a" id="sol-3" inert><div class="prob-a-clip"><div class="prob-a-in"><span class="tag-a">La solución</span><h3>Inventario conectado a tus ventas</h3><p>Marcas qué hay en stock y qué es por encargo, ocultas lo agotado y ves cuáles son los productos más pedidos.</p><a href="proyectos/ambar.html">Así lo resolví en Ambar →</a></div></div></div>
+      </li>
+      <li class="prob">
+        <div class="prob-q"><span class="tag-q">Problema 04</span><h3>Coordinar a todos te consume el día</h3><p>Clientes, trabajadores y pagos se manejan a mano, por mensajes y llamadas, y todo depende de que tú estés pendiente.</p></div>
+        <button type="button" class="prob-ar" aria-expanded="false" aria-controls="sol-4" aria-label="Ver la solución"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></button>
+        <div class="prob-a" id="sol-4" inert><div class="prob-a-clip"><div class="prob-a-in"><span class="tag-a">La solución</span><h3>Una plataforma donde cada quien tiene su panel</h3><p>Clientes, colaboradores y administración entran con su rol; las solicitudes y los pagos quedan registrados y verificados.</p><a href="proyectos/hogareno.html">Así lo resolví en Hogareño →</a></div></div></div>
+      </li>
+    </ol>
+  </div>
 </section>
 
 <!-- ================= SERVICIOS ================= -->
-<section class="block" id="servicios">
+<section class="block" id="servicios" style="padding-top:0">
   <div class="container">
     <div class="sec-head">
       <div><small>Servicios</small><h2>Lo que construyo<br><span class="fade">para tu negocio.</span></h2></div>
@@ -453,6 +516,18 @@
   document.getElementById('prev').onclick = () => show(s-1);
   document.getElementById('next').onclick = () => show(s+1);
   show(0);
+
+  // Problemas: mostrar u ocultar la solución
+  document.querySelectorAll('.prob-ar').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const li = btn.closest('.prob'), sol = document.getElementById(btn.getAttribute('aria-controls'));
+      const open = !li.classList.contains('open');
+      li.classList.toggle('open', open);
+      btn.setAttribute('aria-expanded', open);
+      btn.setAttribute('aria-label', open ? 'Ocultar la solución' : 'Ver la solución');
+      sol.inert = !open;
+    });
+  });
 
   // Toda la tarjeta abre la página del proyecto
   document.querySelectorAll('.proj').forEach(card => {
