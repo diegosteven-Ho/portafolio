@@ -1,0 +1,11 @@
+// Publica el portafolio en Cloudflare (diegotobar.com).
+// Desplegar: ~/ambar-web/node_modules/.bin/wrangler deploy  (desde esta carpeta)
+{
+  "name": "diegotobar",
+  "compatibility_date": "2026-11-01",
+  "assets": { "directory": "." },
+  "routes": [
+    { "pattern": "diegotobar.com", "custom_domain": true },
+    { "pattern": "www.diegotobar.com", "custom_domain": true }
+  ]
+}
