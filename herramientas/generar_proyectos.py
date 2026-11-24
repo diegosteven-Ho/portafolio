@@ -58,8 +58,15 @@ LOGO = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d=
 
 
 def pagina(p):
+    def titulo(cap):
+        tag = ''
+        if cap.startswith('Panel admin: '):
+            tag, cap = 'Panel admin', cap[len('Panel admin: '):]
+            cap = cap[0].upper() + cap[1:]
+        etiqueta = f'<span class="tag">{e(tag)}</span>' if tag else ''
+        return etiqueta, cap
     shots = '\n'.join(
-        f'<figure class="shot"><img src="../img/screens/{s}.jpg" alt="{e(cap)}" width="390" height="844" loading="{"eager" if i < 3 else "lazy"}"><figcaption>{e(cap)}</figcaption></figure>'
+        (lambda t: f'<figure class="shot"><figcaption>{t[0]}<span class="cap">{e(t[1])}</span></figcaption><img src="../img/screens/{s}.jpg" alt="{e(t[1])}" width="390" height="844" loading="{"eager" if i < 3 else "lazy"}"></figure>')(titulo(cap))
         for i, (s, cap) in enumerate(p['screens']))
     admin = '\n'.join(f'<li><b>{e(t)}</b><span>{e(d)}</span></li>' for t, d in p['admin'])
     tags = ''.join(f'<span>{e(t)}</span>' for t in p['tags'])

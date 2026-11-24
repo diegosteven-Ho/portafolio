@@ -43,7 +43,10 @@ button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
 .gallery:focus-visible{outline:2px solid var(--ink);outline-offset:-2px;border-radius:12px}
 .shot{flex:none;width:250px;margin:0;scroll-snap-align:start}
 .shot img{display:block;width:100%;height:auto;aspect-ratio:390/844;object-fit:cover;object-position:top;border-radius:28px;background:var(--card);box-shadow:0 0 0 1px rgba(0,0,0,.06),0 14px 34px rgba(0,0,0,.12)}
-.shot figcaption{margin-top:12px;font-size:13px;line-height:1.45;color:var(--muted);padding:0 4px}
+.shot{display:flex;flex-direction:column}
+.shot figcaption{order:-1;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-end;gap:8px;min-height:92px;margin:0 0 16px;padding:0 4px}
+.shot figcaption .tag{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#fff;background:var(--ink);border-radius:999px;padding:5px 11px}
+.shot figcaption .cap{font-family:'Inter Tight',Inter,sans-serif;font-weight:600;font-size:20px;line-height:1.18;letter-spacing:-.025em;color:var(--ink)}
 
 /* texto */
 .about{padding:20px 0 36px;border-bottom:1px solid rgba(0,0,0,.08)}
@@ -86,6 +89,8 @@ button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
   .actions .btn{flex:none}
   .gallery{padding:6px 20px 20px;margin:0 -20px;scroll-padding:0 20px;gap:12px}
   .shot{width:72vw;max-width:260px}
+  .shot figcaption{min-height:84px}
+  .shot figcaption .cap{font-size:18px}
   .nav-btns{display:none}
   .about p{font-size:16px}
   .admin li{padding:18px 20px}
