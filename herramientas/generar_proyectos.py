@@ -20,7 +20,7 @@ PROYECTOS = [
   dict(id='hogareno', name='Hogareño', sub='Servicios para el hogar', url='https://www.xn--hogareo-9za.app', label='hogareño.app',
        color='#4642A0', ink='#1C1A3D', tags=['App', 'Supabase', 'Marca'],
        intro='Plataforma que conecta hogares salvadoreños con técnicos de confianza. Cada tipo de usuario tiene su propio panel: administrador, recepcionista, profesional y cliente.',
-       screens=[('hog-1', 'Buscar profesionales por servicio y lugar'), ('hog-2', 'Registro de clientes y profesionales'), ('hog-adm-dash', 'Panel admin: resumen de profesionales, categorías y clientes'), ('hog-adm-sol', 'Panel admin: todas las solicitudes con su profesional asignado'), ('hog-adm-4', 'Panel admin: aprobar o rechazar pagos por transferencia'), ('hog-3', 'Crear una solicitud y recibir cotizaciones')],
+       screens=[('hog-1', 'Buscar profesionales por servicio y lugar'), ('hog-2', 'Registro de clientes y profesionales'), ('hog-adm-dash', 'Panel admin: resumen de profesionales, categorías y clientes'), ('hog-adm-sol', 'Panel admin: todas las solicitudes con su profesional asignado'), ('hog-adm-4', 'Panel admin: aprobar o rechazar pagos por transferencia'), ('hog-pro-trabajos', 'Panel profesional: bolsa de trabajo con solicitudes para cotizar'), ('hog-pro-billetera', 'Panel profesional: billetera con saldo y comisiones'), ('hog-pro-perfil', 'Panel profesional: perfil verificado con reseñas y cuenta bancaria')],
        admin=[
          ('Aprobar profesionales', 'Revisar cada registro, editar perfiles y ver el historial de trabajos de cada técnico.'),
          ('Seguir las solicitudes', 'Ver cada trabajo de principio a fin y su estado.'),
@@ -60,9 +60,10 @@ LOGO = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d=
 def pagina(p):
     def titulo(cap):
         tag = ''
-        if cap.startswith('Panel admin: '):
-            tag, cap = 'Panel admin', cap[len('Panel admin: '):]
-            cap = cap[0].upper() + cap[1:]
+        for pref in ('Panel admin', 'Panel profesional'):
+            if cap.startswith(pref + ': '):
+                tag, cap = pref, cap[len(pref) + 2:]
+                cap = cap[0].upper() + cap[1:]
         etiqueta = f'<span class="tag">{e(tag)}</span>' if tag else ''
         return etiqueta, cap
     shots = '\n'.join(
