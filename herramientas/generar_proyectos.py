@@ -20,7 +20,7 @@ PROYECTOS = [
   dict(id='hogareno', name='Hogareño', sub='Servicios para el hogar', url='https://www.xn--hogareo-9za.app', label='hogareño.app',
        color='#4642A0', ink='#1C1A3D', tags=['App', 'Supabase', 'Marca'],
        intro='Plataforma que conecta hogares salvadoreños con técnicos de confianza. Cada tipo de usuario tiene su propio panel: administrador, recepcionista, profesional y cliente.',
-       screens=[('hog-1', 'Buscar profesionales por servicio y lugar'), ('hog-adm-1', 'Panel admin: resumen de profesionales, categorías y clientes'), ('hog-adm-2', 'Panel admin: profesionales, su estado y verificación'), ('hog-adm-3', 'Panel admin: todas las solicitudes con su profesional asignado'), ('hog-adm-4', 'Panel admin: aprobar o rechazar pagos por transferencia'), ('hog-3', 'Crear una solicitud y recibir cotizaciones'), ('hog-2', 'Registro de clientes y profesionales'), ('hog-4', 'Registro paso a paso')],
+       screens=[('hog-1', 'Buscar profesionales por servicio y lugar'), ('hog-adm-1', 'Panel admin: resumen de profesionales, categorías y clientes'), ('hog-adm-2', 'Panel admin: profesionales, su estado y verificación'), ('hog-adm-3', 'Panel admin: todas las solicitudes con su profesional asignado'), ('hog-adm-4', 'Panel admin: aprobar o rechazar pagos por transferencia'), ('hog-3', 'Crear una solicitud y recibir cotizaciones'), ('hog-2', 'Registro de clientes y profesionales')],
        admin=[
          ('Aprobar profesionales', 'Revisar cada registro, editar perfiles y ver el historial de trabajos de cada técnico.'),
          ('Seguir las solicitudes', 'Ver cada trabajo de principio a fin y su estado.'),
